@@ -36,6 +36,7 @@ const {
   const { sms, downloadMediaMessage, AntiDelete } = require('./lib')
   const FileType = require('file-type');
   const path = require('path');
+  const securityMiddleware = require('./all/anti/security');
   const axios = require('axios')
   const { File } = require('megajs')
   const { fromBuffer } = require('file-type')
@@ -248,6 +249,11 @@ conn.sendMessage(conn.user.id, {
       }
     }
   });
+	
+  //============================== 
+	    // Apply security check
+    const allowed = await securityMiddleware(conn, m, isCommand);
+    if (!allowed) return; // Message blocked by security
   //============================== 
 
   conn.ev.on("group-participants.update", (update) => GroupEvents(conn, update));	  
