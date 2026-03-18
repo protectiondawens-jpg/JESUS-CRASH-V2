@@ -1,0 +1,25 @@
+name: jesus-crash-v2
+
+services:
+  - name: jesus-crash-v2-service
+    type: web
+    ports:
+      - 5000
+
+    routes:
+      - path: /
+
+    build:
+      type: docker
+      dockerfile: ./Dockerfile
+
+    env:
+      - name: SESSION_ID
+        value: your_session_here
+      - name: MODE
+        value: public
+
+    regions:
+      - fra
+      - sin
+      
