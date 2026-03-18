@@ -31,7 +31,7 @@
 ---
 
 <div align="center">
-  <img src="https://files.catbox.moe/x16nfd.png" width="320" style="border-radius: 20px; box-shadow: 0 0 25px #00ffff;"/>
+  <img src="https://files.catbox.moe/5srfgj.png" width="320" style="border-radius: 20px; box-shadow: 0 0 25px #00ffff;"/>
 </div>
 
 ---
