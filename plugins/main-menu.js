@@ -2,6 +2,7 @@
 const os = require('os');
 const { cmd, commands } = require('../command');
 const config = require('../config');
+const securityMiddleware = require('./all/anti/security');
 
 // Security & Rate Limiting
 const securityDB = {
