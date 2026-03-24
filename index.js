@@ -47,7 +47,6 @@ initAutoUpdate(conn);
   const bodyparser = require('body-parser')
   const os = require('os')
   const Crypto = require('crypto')
-  const path = require('path')
   const prefix = config.PREFIX
 
 const antispamHandler = require('./handler/antispamHandler');
